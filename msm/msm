@@ -741,12 +741,12 @@ case ${OPT} in
       printf "" > ${mycroft_skill_folder}/.msm.tmp
       # These skills are automatically installed on all mycroft-core
       # installations.
-      install_from_url_list "https://raw.githubusercontent.com/MycroftAI/mycroft-skills/master/DEFAULT-SKILLS"
+      install_from_url_list "https://raw.githubusercontent.com/MycroftAI/mycroft-skills/18.02/DEFAULT-SKILLS"
       exit_code=$?
 
       # Grab any platform-specific skills
       if [[ ${mycroft_platform} != 'null' ]] ; then
-         install_from_url_list "https://raw.githubusercontent.com/MycroftAI/mycroft-skills/master/DEFAULT-SKILLS.${mycroft_platform}" || exit_code=$?
+         install_from_url_list "https://raw.githubusercontent.com/MycroftAI/mycroft-skills/18.02/DEFAULT-SKILLS.${mycroft_platform}" || exit_code=$?
       fi
 
       # Suppress error 20 (skill exists) since this is an expected error
